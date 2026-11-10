@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { aboutMe, experience, education, skills, personalInfo, stats } from "@/data/portfolioData";
+import SkillsGrid from "@/components/SkillsGrid";
 import Reveal from "@/components/Reveal";
 
 type Tab = "about" | "experience" | "education" | "skills" | "achievements";
@@ -138,24 +139,7 @@ export default function ExperienceTabs() {
                     <h3 className="text-sm font-bold text-accent uppercase tracking-wider mb-5">
                       {group}
                     </h3>
-                    <div className="space-y-4 max-w-xl">
-                      {list.map((skill) => (
-                        <div key={skill.name}>
-                          <div className="flex items-center justify-between mb-1.5">
-                            <span className="text-[13px] text-[#e6eae9]">
-                              {skill.icon} {skill.name}
-                            </span>
-                            <span className="text-xs text-[#6b7276]">{skill.level}%</span>
-                          </div>
-                          <div className="h-1.5 rounded-full bg-[#25282b] overflow-hidden">
-                            <div
-                              className="h-full rounded-full bg-accent transition-all duration-1000"
-                              style={{ width: `${skill.level}%` }}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    <SkillsGrid list={list} />
                   </Reveal>
                 ))}
               </div>
