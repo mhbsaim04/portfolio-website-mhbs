@@ -115,24 +115,6 @@ export const experience = [
     technologies: ["Project Management", "Digital Strategy", "Social Media", "Canva", "Customer Support"],
     icon: "💼",
   },
-  {
-    id: 2,
-    role: "Full-Stack Web Developer in Training",
-    company: "Independent & Open Source",
-    location: "Remote",
-    period: "2024 – Present",
-    type: "Engineering",
-    description:
-      "Architecting and shipping production-grade full-stack web applications with modern tech stacks (Next.js App Router, React 19, TypeScript, MongoDB).",
-    achievements: [
-      "Built Wanderlast, a dual-app travel booking platform with Next.js frontend and Express/MongoDB backend",
-      "Developed Bazar Dor, a Bengali-language market price tracker with OAuth and Better Auth security",
-      "Engineered FitLog, an interactive workout planner with reactive state and persistent local tracking",
-      "Authored open source repositories with consistent GitHub streaks and clean commit histories",
-    ],
-    technologies: ["Next.js", "React 19", "TypeScript", "Tailwind v4", "Better Auth", "MongoDB", "Express.js"],
-    icon: "🚀",
-  },
 ];
 
 export const projects = [

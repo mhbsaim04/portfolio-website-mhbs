@@ -21,7 +21,7 @@ export async function generateMetadata({
   const project = projects.find((p) => p.id === id);
   if (!project) return { title: "Project Not Found" };
   return {
-    title: `${project.title} | Saim.dev`,
+    title: `${project.title} | mhbs.portfolio`,
     description: project.shortDescription,
   };
 }

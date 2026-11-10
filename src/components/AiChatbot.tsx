@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Bot, X, Send, Sparkles } from "lucide-react";
+import { Bot, X, Send, Sparkles, MessageCircle } from "lucide-react";
 
 interface Message {
   id: string;
@@ -118,19 +118,22 @@ export default function AiChatbot() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      {/* Floating Toggle Button */}
+      {/* Floating Toggle Button — dark circle, outlined bubble with ?? */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
           aria-label="Open AI Assistant"
-          className="group relative flex items-center gap-3 px-4 py-3 rounded-full bg-[#00e572] text-[#062d15] font-bold text-sm shadow-[0_0_28px_rgba(0,229,114,0.3)] hover:scale-105 hover:bg-[#00f77e] transition-all duration-300 border border-[#00e572] cursor-pointer"
+          className="group relative w-14 h-14 rounded-full bg-[#1a1d1e] border border-[#2a2d30] shadow-[0_8px_28px_rgba(0,0,0,0.55)] flex items-center justify-center cursor-pointer hover:scale-105 hover:border-[#00e572]/50 transition-all duration-300"
         >
-          <div className="relative">
-            <Bot className="w-5 h-5" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#062d15] rounded-full animate-ping" />
-          </div>
-          <span className="hidden sm:inline font-bold">Ask Saim&apos;s AI</span>
-          <span className="px-2 py-0.5 rounded-full bg-[#062d15]/20 text-xs font-mono">v1.0</span>
+          <MessageCircle
+            className="w-8 h-8 text-white"
+            strokeWidth={1.6}
+            aria-hidden
+          />
+          {/* "? mark centered inside the bubble */}
+          <span className="absolute inset-0 flex items-center justify-center pb-2 text-white text-[13px] font-bold font-mono pointer-events-none group-hover:text-accent transition-colors duration-300">
+            ?
+          </span>
         </button>
       )}
 

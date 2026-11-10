@@ -39,8 +39,9 @@ export default function SiteNav() {
       <div className="container-x flex items-center h-24 gap-8">
         {/* Wordmark */}
         <Link href="/" className="no-underline shrink-0">
-          <span className="text-2xl font-bold tracking-tight text-white">
-            Saim<span className="text-accent">.dev</span>
+          <span className="text-2xl font-bold tracking-tight">
+            <span className="text-accent">mhbs</span>
+            <span className="text-white">.portfolio</span>
           </span>
         </Link>
 
