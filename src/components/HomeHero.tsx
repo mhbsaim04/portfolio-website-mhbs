@@ -15,8 +15,8 @@ export default function HomeHero() {
     <section className="pt-8 sm:pt-12 pb-12 sm:pb-16">
       <div className="container-x w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10">
-          {/* Left: intro block */}
-          <div className="lg:col-span-7 space-y-6 max-w-2xl">
+          {/* Intro block — below the photo on mobile, left of it on desktop */}
+          <div className="order-2 lg:order-1 lg:col-span-7 space-y-6 max-w-2xl">
             <Reveal delay={300}>
               <p className="text-2xl sm:text-3xl font-bold text-white">Hello! I&apos;m</p>
             </Reveal>
@@ -69,8 +69,8 @@ export default function HomeHero() {
             </Reveal>
           </div>
 
-          {/* Right: photo masked inside a circle, orbit arcs sweeping around it */}
-          <div className="lg:col-span-5 flex justify-center">
+          {/* Photo circle — first on mobile, right side on desktop */}
+          <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center">
             <Reveal delay={500} className="w-full">
               <div className="relative mx-auto w-[300px] sm:w-[380px] lg:w-[520px] max-w-full aspect-square">
                 {/* orbit ring 1 — long dashed segments, slow rotation */}
