@@ -37,7 +37,7 @@ export default function SiteNav() {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="container-x flex items-center h-24 gap-8">
+      <div className="container-x flex items-center justify-center md:justify-between h-24 gap-8">
         {/* Wordmark */}
         <Link href="/" className="no-underline shrink-0">
           <span className="text-2xl font-bold tracking-tight">
