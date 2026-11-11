@@ -72,7 +72,7 @@ export default function HomeHero() {
           {/* Right: photo masked inside a circle, orbit arcs sweeping around it */}
           <div className="lg:col-span-5 flex justify-center">
             <Reveal delay={500} className="w-full">
-              <div className="relative mx-auto w-[300px] sm:w-[380px] lg:w-[480px] max-w-full aspect-square">
+              <div className="relative mx-auto w-[300px] sm:w-[380px] lg:w-[520px] max-w-full aspect-square">
                 {/* orbit ring 1 — long dashed segments, slow rotation */}
                 <svg
                   viewBox="0 0 440 440"
@@ -116,8 +116,8 @@ export default function HomeHero() {
                     alt={personalInfo.name}
                     fill
                     priority
-                    sizes="(max-width: 640px) 300px, (max-width: 1024px) 380px, 480px"
-                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 300px, (max-width: 1024px) 380px, 520px"
+                    className="object-contain object-top"
                   />
                 </div>
               </div>

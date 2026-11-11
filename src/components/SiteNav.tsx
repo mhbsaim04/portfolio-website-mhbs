@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { personalInfo } from "@/data/portfolioData";
 
 const links = [
   { name: "Home", href: "/" },
@@ -60,8 +61,15 @@ export default function SiteNav() {
         </nav>
 
         {/* Right side */}
-        <div className="hidden md:block shrink-0">
-          <Link href="/contact" className="btn-green !text-[14px] !px-9 !py-3.5">
+        <div className="hidden md:flex items-center gap-3 shrink-0">
+          <a
+            href={personalInfo.resumeLink}
+            download="Resume_Mazharul_Hoq_Bhuiyan_Saim.pdf"
+            className="btn-outline-green !text-[14px] !px-8 !py-3.5"
+          >
+            Resume <span aria-hidden>↓</span>
+          </a>
+          <Link href="/contact" className="btn-green !text-[14px] !px-8 !py-3.5">
             Hire me!
           </Link>
         </div>
@@ -94,10 +102,17 @@ export default function SiteNav() {
                 {link.name}
               </Link>
             ))}
+            <a
+              href={personalInfo.resumeLink}
+              download="Resume_Mazharul_Hoq_Bhuiyan_Saim.pdf"
+              className="btn-outline-green mt-3 !justify-center !text-[13px]"
+            >
+              Download Resume <span aria-hidden>↓</span>
+            </a>
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="btn-green mt-3 !justify-center"
+              className="btn-green !justify-center"
             >
               Hire me!
             </Link>

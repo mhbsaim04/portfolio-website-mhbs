@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { IconType } from "react-icons";
 import {
   SiNextdotjs,
@@ -13,9 +14,10 @@ import {
   SiGithub,
   SiVercel,
   SiQgis,
+  SiOpencode,
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
-import { FiLock, FiLink, FiBriefcase, FiCode, FiPenTool } from "react-icons/fi";
+import { FiLock, FiLink, FiCode, FiDatabase } from "react-icons/fi";
 
 /**
  * Skill name → brand glyph (react-icons Simple Icons), with generic
@@ -39,10 +41,15 @@ const skillIcons: Record<string, IconType> = {
   // Tools & Platforms
   "Git & GitHub": SiGithub,
   "VS Code": TbBrandVscode,
-  "Vercel Deployment": SiVercel,
-  "Canva & Brand Creatives": FiPenTool,
+  "NoSQLBooster for MongoDB": FiDatabase,
+  "Vercel": SiVercel,
+  opencode: SiOpencode,
   "GIS (ArcGIS & QGIS)": SiQgis,
-  "Project Management": FiBriefcase,
+};
+
+/** Skills whose icon is a real brand PNG asset instead of a react-icon glyph. */
+const customSkillImages: Record<string, string> = {
+  antigravity: "/images/Google-Antigravity-Icon-White.png",
 };
 
 export default function SkillIcon({
@@ -52,6 +59,19 @@ export default function SkillIcon({
   name: string;
   className?: string;
 }) {
+  const customSrc = customSkillImages[name];
+  if (customSrc) {
+    return (
+      <Image
+        src={customSrc}
+        alt=""
+        width={32}
+        height={32}
+        className={className}
+        aria-hidden
+      />
+    );
+  }
   const Icon = skillIcons[name] ?? FiCode;
   return <Icon className={className} aria-hidden />;
 }

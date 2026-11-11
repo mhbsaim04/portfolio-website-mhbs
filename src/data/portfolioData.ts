@@ -15,7 +15,7 @@ export const personalInfo = {
   location: "Bangladesh",
   targetRole: "Full-Stack Web Engineer",
   bio: "Full-stack web developer in training who builds modern, responsive web apps with Next.js, React, TypeScript, Node.js and MongoDB. Combining clean engineering with project management and spatial data thinking.",
-  profileImage: "/images/saim_hero_img.png",
+  profileImage: "/images/saim_hero_image.png",
   resumeLink: "/resume_mazharul_hoq_bhuiyan_saim.pdf",
   socials: {
     github: "https://github.com/mhbsaim04",
@@ -62,10 +62,11 @@ export const skills = {
   tools: [
     { name: "Git & GitHub", level: 88, icon: "🐙" },
     { name: "VS Code", level: 94, icon: "💻" },
-    { name: "Vercel Deployment", level: 90, icon: "▲" },
-    { name: "Canva & Brand Creatives", level: 85, icon: "✨" },
+    { name: "NoSQLBooster for MongoDB", level: 84, icon: "🍃" },
+    { name: "Vercel", level: 90, icon: "▲" },
+    { name: "opencode", level: 86, icon: "🤖" },
+    { name: "antigravity", level: 82, icon: "🚀" },
     { name: "GIS (ArcGIS & QGIS)", level: 78, icon: "🗺️" },
-    { name: "Project Management", level: 86, icon: "📊" },
   ],
 };
 
@@ -315,7 +316,7 @@ export const expertise = [
   {
     title: "Deployment, Tooling & Quality",
     desc: "Ship and maintain live applications with version-controlled, reviewable workflows — optimized builds, performance-minded design, and fully responsive layouts.",
-    tags: ["Vercel Deployment", "Git & GitHub", "Responsive Design", "Performance", "VS Code"],
+    tags: ["Vercel", "Git & GitHub", "Responsive Design", "Performance", "VS Code"],
     icon: "⚙️",
   },
   {
