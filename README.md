@@ -29,21 +29,6 @@ Personal portfolio website of **Mazharul Hoq Bhuiyan Saim** — AI-driven full-s
 - **Fully responsive** — mobile drawer navigation, adaptive hero, and responsive grids throughout.
 - **One-click resume download** — available in the navbar, hero section, and mobile drawer.
 
-## Getting Started
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Build for Production
-
-```bash
-npm run build
-npm start
-```
 
 ---
 
