@@ -79,6 +79,17 @@ export default async function ProjectDetailPage({
                   <GithubIcon className="w-3.5 h-3.5" />
                   GitHub Repo
                 </a>
+                {"apiLink" in project && project.apiLink && (
+                  <a
+                    href={project.apiLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline-green !text-xs"
+                  >
+                    <GithubIcon className="w-3.5 h-3.5" />
+                    API Repo
+                  </a>
+                )}
               </div>
               <p className="text-xs text-accent pt-1">{project.techStack.join(", ")}</p>
             </div>
@@ -184,6 +195,11 @@ export default async function ProjectDetailPage({
                   <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#9aa2a6] no-underline hover:text-white transition-colors">
                     Source Code ↗
                   </a>
+                  {"apiLink" in project && project.apiLink && (
+                    <a href={project.apiLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#9aa2a6] no-underline hover:text-white transition-colors">
+                      API ↗
+                    </a>
+                  )}
                 </div>
               </div>
 

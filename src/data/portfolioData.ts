@@ -95,6 +95,17 @@ export const education = [
     icon: "🏫",
     status: "completed",
   },
+  {
+    id: 3,
+    degree: "Secondary School Certificate (SSC), Science",
+    institution: "Feni Government Pilot High School",
+    location: "Feni, Bangladesh",
+    period: "January 2016 – October 2021",
+    grade: "Science Group",
+    description: "Completed secondary education in the Science group.",
+    icon: "🏫",
+    status: "completed",
+  },
 ];
 
 export const experience = [
@@ -119,6 +130,42 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    id: "studiospace-creative-studio-marketplace",
+    title: "StudioSpace — Creative Studio Sharing Platform",
+    shortDescription:
+      "Peer-to-peer marketplace for booking photo studios, sound stages, podcast lounges, and workshops by the hour, with host approvals and server-enforced double-booking prevention.",
+    thumbnail: "/images/projects_image/studiospace.png",
+    techStack: [
+      "Next.js 16",
+      "React 19",
+      "Tailwind CSS v4",
+      "shadcn/ui",
+      "Express 5",
+      "MongoDB Atlas",
+      "Better Auth (JWT)",
+    ],
+    fullDescription:
+      "StudioSpace is a peer-to-peer marketplace that turns idle creative spaces into bookable studios. Hosts list rooms, set rates, and approve booking requests, while creators search and filter spaces, check availability, and reserve the exact hours they need with transparent pricing. The platform also includes wishlists, verified reviews, separate host and guest dashboards, and email and Google sign-in.",
+    liveLink: "https://studiospace-marketplace-steel.vercel.app",
+    githubLink: "https://github.com/mhbsaim04/studiospace-platform",
+    apiLink: "https://github.com/mhbsaim04/studiospace-backend-server",
+    challenges: [
+      "Preventing overlapping bookings reliably with server-enforced availability checks for the exact requested hours.",
+      "Building connected host and guest workflows for listing spaces, approving requests, and tracking reservations.",
+      "Securing API access with Better Auth sessions and JWT verification across the Next.js client and Express API.",
+      "Supporting trustworthy marketplace interactions with wishlists and verified reviews.",
+    ],
+    improvements: [
+      "Add calendar integrations so creators and hosts can sync confirmed bookings with their personal calendars.",
+      "Expand booking notifications with configurable reminders and status updates.",
+      "Add richer host analytics for listing performance, occupancy, and earnings.",
+      "Support additional payment options for a smoother end-to-end booking experience.",
+    ],
+    category: "Full Stack",
+    featured: true,
+    color: "#d4a84f",
+  },
   {
     id: "wanderlast-travel-booking",
     title: "Wanderlast — Travel Booking Webapp",
@@ -282,16 +329,16 @@ export const projects = [
 export const stats = [
   { label: "Target Role", value: "Full-Stack", icon: "💻" },
   { label: "Core Stack", value: "Next.js 16", icon: "▲" },
-  { label: "Live Webapps", value: "5+ Live", icon: "🚀" },
+  { label: "Live Webapps", value: `${projects.length}+ Live`, icon: "🚀" },
   { label: "GitHub Commits", value: "Active", icon: "🔥" },
 ];
 
 /* Big numeric stats for the home hero, derived from portfolio data */
 export const homeStats = [
-  { value: "5", label: "Live\nWebapps" },
+  { value: String(projects.length), label: "Live\nWebapps" },
   { value: "18", label: "Technologies\nMastered" },
   { value: "2", label: "Work\nRoles" },
-  { value: "2", label: "Education\nMilestones" },
+  { value: String(education.length), label: "Education\nMilestones" },
 ];
 
 export const expertise = [

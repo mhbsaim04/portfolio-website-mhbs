@@ -156,6 +156,16 @@ export default function ProjectsList() {
                     >
                       Code ↗
                     </a>
+                    {"apiLink" in project && project.apiLink && (
+                      <a
+                        href={project.apiLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-bold text-[#9aa2a6] uppercase tracking-wider no-underline hover:text-white transition-colors"
+                      >
+                        API ↗
+                      </a>
+                    )}
                   </div>
                 </div>
 
