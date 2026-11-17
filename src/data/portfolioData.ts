@@ -281,7 +281,7 @@ export const projects = [
     techStack: ["HTML5", "CSS3", "Tailwind CSS", "Responsive Design", "Vercel"],
     fullDescription:
       "Tourism Spots of Feni District is a curated static web portal celebrating the tourism and cultural heritage of Feni, Bangladesh. Visitors can discover detailed spot overviews, visiting hours, historical significance, scenic photography, and location directions across famous landmarks like Muhuri Project, Chandgazi Bhuiyan Mosque, and Bijoy Singh Dighi.",
-    liveLink: "https://tourism-spots-of-feni.vercel.app",
+    liveLink: "https://mhbsaim04-tourism-spots-in-feni.netlify.app",
     githubLink: "https://github.com/mhbsaim04/tourism-spots-in-feni",
     challenges: [
       "Structuring responsive image galleries that look sharp on mobile and high-DPI displays.",
