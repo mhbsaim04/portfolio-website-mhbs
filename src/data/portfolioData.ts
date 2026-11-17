@@ -16,7 +16,7 @@ export const personalInfo = {
   targetRole: "Full-Stack Web Engineer",
   bio: "Full-stack web developer in training who builds modern, responsive web apps with Next.js, React, TypeScript, Node.js and MongoDB. Combining clean engineering with project management and spatial data thinking.",
   profileImage: "/images/saim_hero_image.png",
-  resumeLink: "/resume_mazharul_hoq_bhuiyan_saim.pdf",
+  resumeLink: "/Resume_of_Mazharul_Hoq_Bhuiyan_Saim.pdf",
   socials: {
     github: "https://github.com/mhbsaim04",
     linkedin: "https://www.linkedin.com/in/mazharul-hoq-bhuiyan-saim-32b420355/",
@@ -33,12 +33,12 @@ export const aboutMe = {
   geographyMeetsCode: `I am pursuing my Bachelor's degree in Geography and Environment at Pabna University of Science and Technology (PUST). This academic discipline equips me with a data-driven, spatial mindset. I leverage GIS and remote-sensing tools like ArcGIS, QGIS, and Google Earth Engine (GEE), writing code scripts to analyze environmental data. It connects real-world spatial thinking with algorithmic software development.`,
   hobbies: `Outside the terminal, I enjoy exploring environmental geography, following digital media innovations, analyzing branding strategies, and mentoring peers in web development. I am deeply interested in projects where modern web technology intersects with media, mapping, and consumer products.`,
   funFacts: [
-    "🚀 AI-Driven Full-Stack Engineer in training",
-    "🗺️ Geography & GIS researcher at PUST",
-    "📱 Project & Social Media Manager at Halal Shoot",
-    "⚡ Next.js App Router & TypeScript enthusiast",
-    "🔐 Authentication specialist (Better Auth & JWT)",
-    "☕ Constant learner shipping real products",
+    "AI-Driven Full-Stack Engineer in training",
+    "Geography & GIS researcher at PUST",
+    "Project & Social Media Manager at Halal Shoot",
+    "Next.js App Router & TypeScript enthusiast",
+    "Authentication specialist (Better Auth & JWT)",
+    "Constant learner shipping real products",
   ],
 };
 
@@ -346,36 +346,30 @@ export const expertise = [
     title: "Web & Application Development",
     desc: "Design and build responsive, production-ready web applications with clean architecture, modern App Router patterns, and polished UI — from component design to full page composition.",
     tags: ["Next.js", "React 19", "TypeScript", "Tailwind CSS v4", "JavaScript (ES6+)", "HTML5 & CSS"],
-    icon: "🌐",
   },
   {
     title: "Backend, APIs & Databases",
     desc: "Engineer dependable server-side systems with structured data models, RESTful API design, and scalable CRUD operations powering real-time application features.",
     tags: ["Node.js", "Express.js", "MongoDB & Mongoose", "REST & CRUD APIs", "Data Modeling"],
-    icon: "🛠️",
   },
   {
     title: "Authentication & Security",
     desc: "Implement secure end-to-end access control — credential and multi-provider flows, session handling, and protected routes that keep application data safe.",
     tags: ["Better Auth", "JWT", "Google & GitHub OAuth", "Session Management", "Protected Routes"],
-    icon: "🔐",
   },
   {
     title: "Deployment, Tooling & Quality",
     desc: "Ship and maintain live applications with version-controlled, reviewable workflows — optimized builds, performance-minded design, and fully responsive layouts.",
     tags: ["Vercel", "Git & GitHub", "Responsive Design", "Performance", "VS Code"],
-    icon: "⚙️",
   },
   {
     title: "Project & Digital Strategy Management",
     desc: "Coordinate deliverables, timelines, and cross-functional stakeholders — managing brand social channels, creative production, and community communication.",
     tags: ["Project Management", "Digital Strategy", "Social Media", "Canva", "Customer Support"],
-    icon: "📊",
   },
   {
     title: "GIS & Spatial Data Analysis",
     desc: "Geographic-information thinking applied to data — remote sensing, spatial modeling, and code-driven environmental analysis with modern geospatial platforms.",
     tags: ["Google Earth Engine (GEE)", "ArcGIS", "QGIS", "Remote Sensing", "Environmental Data"],
-    icon: "🗺️",
   },
 ];

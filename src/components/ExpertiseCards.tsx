@@ -26,9 +26,6 @@ export default function ExpertiseCards() {
                     <span className="ghost-num group-hover:[-webkit-text-stroke-color:rgba(0,229,114,0.65)] transition-all duration-300">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-base" aria-hidden>
-                      {item.icon}
-                    </span>
                   </div>
                   <span className="w-11 h-11 rounded-full border border-[#25282b] flex items-center justify-center text-[#9aa2a6] group-hover:text-accent group-hover:border-[#00e572]/60 group-hover:rotate-45 transition-all duration-300">
                     <ArrowDownRight className="w-4 h-4" />
