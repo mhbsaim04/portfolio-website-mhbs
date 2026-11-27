@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { GithubIcon, LinkedinIcon, TwitterIcon, FacebookIcon } from "@/components/SocialIcons";
 import { personalInfo, homeStats, aboutMe } from "@/data/portfolioData";
 import Reveal from "@/components/Reveal";
@@ -37,9 +38,16 @@ export default function HomeHero() {
               </p>
             </Reveal>
 
-            {/* Resume + socials */}
-            <Reveal delay={700}>
-              <div className="flex flex-wrap items-center gap-6 pt-2">
+            {/* Action buttons */}
+            <Reveal delay={600}>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Link
+                  href="/projects"
+                  className="btn-green uppercase !text-[12px] tracking-[0.18em]"
+                >
+                  See my Projects <span aria-hidden>→</span>
+                </Link>
+
                 <a
                   href={personalInfo.resumeLink}
                   download="Resume_Mazharul_Hoq_Bhuiyan_Saim.pdf"
@@ -47,21 +55,24 @@ export default function HomeHero() {
                 >
                   Download Resume <span aria-hidden>↓</span>
                 </a>
+              </div>
+            </Reveal>
 
-                <div className="flex items-center gap-3.5">
-                  {socials.map(({ label, href, Icon }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={label}
-                      className="w-11 h-11 rounded-full border border-[#25282b] flex items-center justify-center text-[#9aa2a6] hover:text-accent hover:border-[#00e572]/60 transition-colors no-underline"
-                    >
-                      <Icon className="w-[18px] h-[18px]" />
-                    </a>
-                  ))}
-                </div>
+            {/* Social links */}
+            <Reveal delay={700}>
+              <div className="flex items-center gap-3.5 pt-1">
+                {socials.map(({ label, href, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="w-11 h-11 rounded-full border border-[#25282b] flex items-center justify-center text-[#9aa2a6] hover:text-accent hover:border-[#00e572]/60 transition-colors no-underline"
+                  >
+                    <Icon className="w-[18px] h-[18px]" />
+                  </a>
+                ))}
               </div>
             </Reveal>
           </div>
