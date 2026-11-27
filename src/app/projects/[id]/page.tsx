@@ -21,7 +21,7 @@ export async function generateMetadata({
   const project = projects.find((p) => p.id === id);
   if (!project) return { title: "Project Not Found" };
   return {
-    title: `${project.title} | mhbs.portfolio`,
+    title: `${project.title} | MHBS`,
     description: project.shortDescription,
   };
 }
@@ -77,7 +77,7 @@ export default async function ProjectDetailPage({
                   className="btn-outline-green !text-xs"
                 >
                   <GithubIcon className="w-3.5 h-3.5" />
-                  GitHub Repo
+                  {"apiLink" in project && project.apiLink ? "Client Repo" : "GitHub Repo"}
                 </a>
                 {"apiLink" in project && project.apiLink && (
                   <a
@@ -87,7 +87,7 @@ export default async function ProjectDetailPage({
                     className="btn-outline-green !text-xs"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
-                    API Repo
+                    Server Repo
                   </a>
                 )}
               </div>
@@ -181,7 +181,9 @@ export default async function ProjectDetailPage({
                   </div>
                   <div className="flex justify-between border-b border-[#25282b]/70 pb-3">
                     <dt className="text-[#6b7276]">Repository</dt>
-                    <dd className="font-semibold text-white">Public (Client)</dd>
+                    <dd className="font-semibold text-white">
+                      {"apiLink" in project && project.apiLink ? "Public (Client & Server)" : "Public"}
+                    </dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-[#6b7276]">Status</dt>
@@ -193,11 +195,11 @@ export default async function ProjectDetailPage({
                     Visit Live ↗
                   </a>
                   <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#9aa2a6] no-underline hover:text-white transition-colors">
-                    Source Code ↗
+                    {"apiLink" in project && project.apiLink ? "Client Code ↗" : "Source Code ↗"}
                   </a>
                   {"apiLink" in project && project.apiLink && (
                     <a href={project.apiLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#9aa2a6] no-underline hover:text-white transition-colors">
-                      API ↗
+                      Server Code ↗
                     </a>
                   )}
                 </div>

@@ -48,14 +48,18 @@ export const skills = {
     { name: "React 19", level: 88, icon: "⚛️" },
     { name: "TypeScript", level: 84, icon: "🔷" },
     { name: "Tailwind CSS v4", level: 92, icon: "🎨" },
+    { name: "shadcn/ui", level: 90, icon: "🎨" },
     { name: "JavaScript (ES6+)", level: 88, icon: "⚡" },
     { name: "HTML5 & Modern CSS", level: 95, icon: "🌐" },
   ],
   backend: [
-    { name: "Node.js & Express.js", level: 82, icon: "🟢" },
+    { name: "Node.js", level: 85, icon: "🟢" },
+    { name: "Express.js", level: 84, icon: "⚡" },
     { name: "MongoDB & Mongoose", level: 85, icon: "🍃" },
-    { name: "Better Auth & JWT", level: 86, icon: "🔐" },
-    { name: "RESTful & CRUD APIs", level: 88, icon: "🔗" },
+    { name: "Better Auth", level: 88, icon: "🔐" },
+    { name: "JWT", level: 86, icon: "🔑" },
+    { name: "Stripe", level: 85, icon: "💳" },
+    { name: "CRUD & REST APIs", level: 88, icon: "🔗" },
     { name: "Google Earth Engine (GEE)", level: 75, icon: "🌍" },
     { name: "C Programming", level: 70, icon: "⚙️" },
   ],
@@ -130,6 +134,44 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    id: "fixmate-device-repair-marketplace",
+    title: "FixMate — Device Repair Marketplace",
+    shortDescription:
+      "Full-stack device repair marketplace connecting customers with vetted technicians, featuring live repair lifecycle tracking, role-based dashboards, and secure Stripe payments.",
+    thumbnail: "/images/projects_image/fixmate.png",
+    techStack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "shadcn/ui",
+      "BetterAuth (JWT)",
+      "MongoDB",
+      "Stripe",
+      "jsPDF",
+    ],
+    fullDescription:
+      "FixMate is a comprehensive full-stack device repair marketplace connecting customers with vetted repair technicians. Customers can browse and book repair services with search and multi-criteria filters, monitor repair milestones in real time through an interactive lifecycle tracker, and pay securely via Stripe after service completion with downloadable PDF invoices. Technicians manage their service catalogues subject to admin approval and update repair stages, while administrators moderate users, services, and bookings through role-specific dashboards.",
+    liveLink: "https://fixmate-alpha.vercel.app",
+    githubLink: "https://github.com/mhbsaim04/fixmate-client",
+    apiLink: "https://github.com/mhbsaim04/fixmate-backend",
+    challenges: [
+      "Designing a robust multi-role authentication and authorization architecture (Customer, Technician, Admin) with BetterAuth, MongoDB adapter, and JWT session handling.",
+      "Architecting an end-to-end repair booking lifecycle with live status tracking, technician milestone progression, and user notifications.",
+      "Integrating Stripe payments with a secure pay-after-service workflow and automatic downloadable PDF invoice generation using jsPDF.",
+      "Building an admin moderation and technician service listing workflow with image uploads (ImgBB) and status validation.",
+    ],
+    improvements: [
+      "Implement real-time in-app live chat between customers and technicians during active repair jobs.",
+      "Add automated SMS and push notifications for immediate repair milestone and payment updates.",
+      "Incorporate geolocation-based shop discovery with interactive map routing.",
+      "Develop technician performance analytics and automated payout workflows.",
+    ],
+    category: "Full Stack",
+    featured: true,
+    color: "#2563eb",
+  },
   {
     id: "studiospace-creative-studio-marketplace",
     title: "StudioSpace — Creative Studio Sharing Platform",
@@ -336,7 +378,7 @@ export const stats = [
 /* Big numeric stats for the home hero, derived from portfolio data */
 export const homeStats = [
   { value: String(projects.length), label: "Live\nWebapps" },
-  { value: "18", label: "Technologies\nMastered" },
+  { value: "23", label: "Technologies\nMastered" },
   { value: "2", label: "Work\nRoles" },
   { value: String(education.length), label: "Education\nMilestones" },
 ];
@@ -345,12 +387,12 @@ export const expertise = [
   {
     title: "Web & Application Development",
     desc: "Design and build responsive, production-ready web applications with clean architecture, modern App Router patterns, and polished UI — from component design to full page composition.",
-    tags: ["Next.js", "React 19", "TypeScript", "Tailwind CSS v4", "JavaScript (ES6+)", "HTML5 & CSS"],
+    tags: ["Next.js", "React 19", "TypeScript", "Tailwind CSS v4", "shadcn/ui", "JavaScript (ES6+)"],
   },
   {
     title: "Backend, APIs & Databases",
     desc: "Engineer dependable server-side systems with structured data models, RESTful API design, and scalable CRUD operations powering real-time application features.",
-    tags: ["Node.js", "Express.js", "MongoDB & Mongoose", "REST & CRUD APIs", "Data Modeling"],
+    tags: ["Node.js", "Express.js", "MongoDB & Mongoose", "Stripe", "REST & CRUD APIs", "Data Modeling"],
   },
   {
     title: "Authentication & Security",

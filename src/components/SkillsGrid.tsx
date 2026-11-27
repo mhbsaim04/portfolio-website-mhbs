@@ -11,16 +11,16 @@ export default function SkillsGrid({ list }: { list: Skill[] }) {
   return (
     <>
       {/* Icon tiles */}
-      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
+      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 mb-8">
         {list.map((skill) => (
           <div
             key={skill.name}
             title={skill.name}
-            className="group aspect-square rounded-xl bg-[#1a1d1e] border border-[#25282b] flex items-center justify-center cursor-default hover:-translate-y-1 hover:border-[#00e572]/50 transition-all duration-300"
+            className="group aspect-square rounded-xl bg-[#1a1d1e] border border-[#25282b] flex items-center justify-center cursor-default hover:-translate-y-1 hover:border-[#00e572]/50 transition-all duration-300 p-2 sm:p-3"
           >
             <SkillIcon
               name={skill.name}
-              className="w-7 h-7 text-[#e6eae9] group-hover:text-accent transition-colors duration-300"
+              className="w-12 h-12 sm:w-14 sm:h-14 text-[#e6eae9] group-hover:text-accent transition-colors duration-300"
             />
           </div>
         ))}

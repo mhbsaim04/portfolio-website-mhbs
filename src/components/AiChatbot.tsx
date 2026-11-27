@@ -12,6 +12,7 @@ interface Message {
 
 const suggestedPrompts = [
   "What is Saim's tech stack?",
+  "Tell me about the FixMate project",
   "Tell me about the Wanderlast project",
   "What does Saim do at Halal Shoot?",
   "Where does Saim study?",
@@ -50,7 +51,15 @@ export default function AiChatbot() {
     const q = query.toLowerCase();
 
     if (q.includes("stack") || q.includes("skill") || q.includes("tech") || q.includes("technolog")) {
-      return `Saim's core technical stack includes:\n• Frontend: Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, JavaScript (ES6+)\n• Backend: Node.js, Express.js, MongoDB, Better Auth, JWT Tokens, REST & CRUD APIs\n• Specialized: Google Earth Engine (GEE), ArcGIS, QGIS, Git, Vercel, and Canva for brand strategy.`;
+      return `Saim's core technical stack includes:\n• Frontend: Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, shadcn/ui, JavaScript (ES6+)\n• Backend: Node.js, Express.js, MongoDB, Better Auth, JWT Tokens, Stripe Payments, REST & CRUD APIs\n• Specialized: Google Earth Engine (GEE), ArcGIS, QGIS, Git, Vercel, and Canva for brand strategy.`;
+    }
+
+    if (q.includes("fixmate") || q.includes("repair") || q.includes("device") || q.includes("technician")) {
+      return `FixMate is Saim's full-stack device repair marketplace! Customers browse and book vetted technician services, track repairs through a live status workflow, and pay securely after service with Stripe and downloadable PDF invoices. Technicians manage listings subject to admin approval, and admins moderate the platform through role-specific dashboards. Check it out live at fixmate-alpha.vercel.app.`;
+    }
+
+    if (q.includes("studiospace") || q.includes("studio")) {
+      return `StudioSpace is Saim's creative studio sharing platform! Creators book photo studios, sound stages, and podcast lounges by the hour with host approvals and server-enforced double-booking prevention. Live demo: studiospace-marketplace-steel.vercel.app.`;
     }
 
     if (q.includes("wanderlast") || q.includes("travel")) {
@@ -85,7 +94,7 @@ export default function AiChatbot() {
       return `You can download Saim's updated resume with a single click right from the Hero section or the top navigation bar!`;
     }
 
-    return `Thanks for your question! Saim is an AI-driven full-stack web engineer proficient in Next.js, React 19, TypeScript, Node.js, and MongoDB. Feel free to ask about his projects (Wanderlast, Bazar Dor, FitLog), his experience at Halal Shoot, or his studies at PUST!`;
+    return `Thanks for your question! Saim is an AI-driven full-stack web engineer proficient in Next.js, React 19, TypeScript, Node.js, and MongoDB. Feel free to ask about his projects (FixMate, StudioSpace, Wanderlast, Bazar Dor, FitLog), his experience at Halal Shoot, or his studies at PUST!`;
   };
 
   const handleSend = (textToSend?: string) => {

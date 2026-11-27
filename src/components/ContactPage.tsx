@@ -15,6 +15,7 @@ export default function ContactPage() {
   const [copied, setCopied] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const waLink = `https://wa.me/${personalInfo.whatsapp.replace(/[^0-9]/g, "")}`;
@@ -28,15 +29,36 @@ export default function ContactPage() {
     { id: "location", label: "Address", value: personalInfo.location, href: null, icon: MapPin },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || data?.success === "false" || data?.success === false) {
+        throw new Error(data?.message || "Failed to send message");
+      }
       setSubmitted(true);
       setForm({ name: "", email: "", message: "" });
       setTimeout(() => setSubmitted(false), 6000);
-    }, 800);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Failed to send message. Please try again or email me directly."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -57,6 +79,11 @@ export default function ContactPage() {
             {submitted && (
               <p className="mb-6 p-3.5 rounded-lg bg-[#00e572]/10 border border-[#00e572]/30 text-accent text-xs">
                 ✓ Message sent successfully! I&apos;ll get back to you soon.
+              </p>
+            )}
+            {error && (
+              <p className="mb-6 p-3.5 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-xs">
+                ✗ {error}
               </p>
             )}
 

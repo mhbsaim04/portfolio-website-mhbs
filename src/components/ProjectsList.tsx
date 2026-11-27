@@ -154,7 +154,7 @@ export default function ProjectsList() {
                       rel="noopener noreferrer"
                       className="text-xs font-bold text-[#9aa2a6] uppercase tracking-wider no-underline hover:text-white transition-colors"
                     >
-                      Code ↗
+                      {"apiLink" in project && project.apiLink ? "Client ↗" : "Code ↗"}
                     </a>
                     {"apiLink" in project && project.apiLink && (
                       <a
@@ -163,7 +163,7 @@ export default function ProjectsList() {
                         rel="noopener noreferrer"
                         className="text-xs font-bold text-[#9aa2a6] uppercase tracking-wider no-underline hover:text-white transition-colors"
                       >
-                        API ↗
+                        Server ↗
                       </a>
                     )}
                   </div>

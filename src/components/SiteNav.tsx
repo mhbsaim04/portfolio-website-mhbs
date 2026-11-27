@@ -37,12 +37,11 @@ export default function SiteNav() {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="container-x flex items-center justify-center md:justify-between h-24 gap-8">
+      <div className="container-x flex items-center justify-between h-20 sm:h-24 gap-4 md:gap-8">
         {/* Wordmark */}
         <Link href="/" className="no-underline shrink-0">
-          <span className="text-2xl font-bold tracking-tight">
-            <span className="text-accent">mhbs</span>
-            <span className="text-white">.portfolio</span>
+          <span className="text-2xl sm:text-3xl font-bold tracking-tight text-accent">
+            MHBS
           </span>
         </Link>
 

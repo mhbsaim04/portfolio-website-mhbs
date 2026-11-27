@@ -178,10 +178,23 @@ body {
   }
 }
 .animate-spin-slower {
-  animation: spin-slow 22s linear infinite;
+  animation: spin-slow 38s linear infinite;
 }
 .animate-spin-slow-rev {
-  animation: spin-slow 30s linear infinite reverse;
+  animation: spin-slow 48s linear infinite reverse;
+}
+
+@keyframes float-gentle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+.animate-float {
+  animation: float-gentle 7s ease-in-out infinite;
 }
 
 @keyframes blink-caret {
@@ -277,6 +290,11 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .page-veil {
     display: none;
+  }
+  .animate-spin-slower,
+  .animate-spin-slow-rev,
+  .animate-float {
+    animation: none !important;
   }
 }
 /* Flat inputs (contact form / chat) */
